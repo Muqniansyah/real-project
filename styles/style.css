@@ -1,0 +1,411 @@
+:root {
+  --orange: #f48a29;
+  --primary: #ffffff;
+  --shadow: 0 2px 2px rgb(0 0 0 /0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  /* min-height: 4000px; */
+  /* background-color: black; */
+}
+
+/* navbar */
+nav p {
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+nav p span {
+  color: var(--orange);
+}
+
+nav .navbar-nav a {
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
+}
+
+nav .navbar-nav a:hover {
+  color: var(--orange);
+}
+
+nav .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--orange);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* hero */
+.hero {
+  background-image: url(../img/dimsum.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  overflow: hidden;
+  /* supaya naik 1 dimensi */
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 50rem;
+}
+
+.hero .content h1 {
+  margin-top: 10rem;
+  margin-left: 10rem;
+  font-size: 3em;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  /* supaya maju 1 dimensi */
+  position: relative;
+  /* atur tumpukan */
+  z-index: 1;
+}
+
+.hero .btn {
+  margin-left: 10rem;
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 6rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: var(--orange);
+  box-shadow: var(--shadow);
+  /* supaya maju 1 dimensi */
+  position: relative;
+  /* atur tumpukan */
+  z-index: 1;
+}
+
+.hero .btn:hover {
+  color: var(--orange);
+  background-color: white;
+}
+
+/* about, menu, contact */
+.about,
+.menu,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--orange);
+  text-shadow: var(--shadow);
+}
+
+.about p {
+  margin-bottom: 16rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.menu {
+  background-color: var(--orange);
+}
+
+.menu h2 {
+  color: var(--primary);
+}
+
+.menu p {
+  color: #4b4848;
+  font-weight: lighter;
+  margin-top: -40px;
+}
+
+.info-panel {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 10rem;
+  height: 50vh;
+  background-color: white;
+  padding: 30px;
+}
+
+.info-panel .row img {
+  width: 250px;
+  height: 250px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.produk {
+  margin-right: 50px;
+}
+
+.info-panel .produk h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.produk .price {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #4b4848;
+  margin-left: 80px;
+}
+
+.produk .price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: red;
+}
+
+.wadah {
+  width: 250px;
+  border-radius: 30px;
+  border: 1px solid #a39595;
+  margin-left: 5%;
+  margin-top: 8%;
+  box-shadow: var(--shadow);
+}
+
+.produk .rating {
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  color: var(--orange);
+  /* padding-left: 50px; */
+  display: flex;
+  justify-content: center;
+}
+
+.produk .rating .star-full {
+  fill: var(--orange);
+}
+
+.contact {
+  background-image: url(../img/1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 15%;
+}
+
+.contact h2 {
+  color: var(--primary);
+}
+
+.contact .card-img {
+  padding: 20px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  margin-left: 15%;
+  margin-top: 8%;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+}
+
+.card-img img {
+  width: 150px;
+}
+
+.contact .card-body {
+  text-align: center;
+}
+
+.contact .card-body .instagram {
+  text-decoration: none;
+  color: black;
+}
+
+.contact .card-body .instagram:hover {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+/* footer */
+footer img {
+  margin-top: 80px;
+}
+
+footer h3 {
+  margin-left: 30px;
+  color: var(--primary);
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer li a {
+  font-size: 1.2rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer li a:hover {
+  color: var(--orange);
+}
+
+footer .copyright {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid black;
+  color: var(--primary);
+  text-shadow: var(--shadow);
+  font-size: 0.9rem;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+footer .copyright a:hover {
+  color: aquamarine;
+  font-style: italic;
+}
+
+/* media query */
+/* Extra large */
+@media (max-width: 1200px) {
+  .contact .card-img {
+    padding: 10px;
+    width: 50px;
+    margin-left: 40%;
+  }
+
+  .info-panel .produk h3 {
+    text-align: center;
+  }
+
+  .produk .price {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .wadah {
+    width: 200px;
+    margin-left: 17%;
+  }
+}
+/* laptop */
+@media (max-width: 992px) {
+  .menu {
+    padding-bottom: 100px;
+  }
+
+  .hero .content h1 {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-left: 0;
+  }
+
+  .hero .btn {
+    margin-left: 0;
+    padding: 1rem 4rem;
+  }
+
+  .about p {
+    margin-bottom: 10rem;
+  }
+
+  .info-panel {
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 30px;
+  }
+
+  .info-panel .row img {
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+  }
+
+  .info-panel .produk h3 {
+    text-align: center;
+  }
+
+  .wadah {
+    width: 200px;
+    background-color: var(--primary);
+    border: 1px solid #a39595;
+    margin-top: 3%;
+    margin-left: 20%;
+  }
+
+  footer img {
+    margin-left: 30px;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  .info-panel {
+    width: 70%;
+  }
+
+  .info-panel .row img {
+    width: 200px;
+    height: 200px;
+    margin-left: 23%;
+  }
+
+  .contact .card-img {
+    margin-left: 45%;
+  }
+}
+/* mobile phone */
+@media (max-width: 576px) {
+  .info-panel {
+    width: 100%;
+  }
+
+  .info-panel .row img {
+    width: 150px;
+    height: 150px;
+    margin-left: 33%;
+  }
+
+  .wadah {
+    width: 150px;
+    margin-left: 30%;
+  }
+
+  .contact .card-img {
+    margin-left: 43%;
+  }
+}
